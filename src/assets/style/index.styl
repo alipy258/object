@@ -1,0 +1,29 @@
+@import "./mixin.styl"
+@import "./variable.styl"
+body,html
+    padding:0
+    margin:0
+    width: 100%
+    height: 100%
+    background: #f3f4f5
+    font-family: PingFangSC-Medium
+*
+  touch-action: none
+input,
+textarea,
+select,
+button
+  outline: none
+  border: none
+i
+  font-style: normal
+.fl
+  float: left
+.fr
+  float: right
+
+.clear-fix
+  &::after
+    content: ""
+    display: table
+    clear: both

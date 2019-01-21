@@ -9,7 +9,8 @@ import {
   Tip,
   Toast,
   Dialog,
-  Scroll
+  Scroll,
+  TabBar
 } from 'cube-ui'
 
 Vue.use(Button)
@@ -18,3 +19,4 @@ Vue.use(Tip)
 Vue.use(Toast)
 Vue.use(Scroll)
 Vue.use(Dialog)
+Vue.use(TabBar)

@@ -1,0 +1,116 @@
+@import "~cube-ui/src/common/stylus/mixin.styl"
+
+border-right-1px($color)
+  position: relative
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    transform-origin: 0 0
+    -webkit-transform-origin: 0 0
+  &:after
+    border-right: 1px solid $color
+    top: 0
+    right: 0
+    height: 100%
+    transform-origin: right 0
+    -webkit-transform-origin: right 0
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      height: 200%
+      transform: scale(.5) translateZ(0)
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      height: 300%
+      transform: scale(.3333333) translateZ(0)
+
+border-top-1px($color)
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    transform-origin: 0 0
+  &:before
+    border-top: 1px solid $color
+    left: 0
+    top: 0
+    width: 100%
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      width: 200%
+      transform: scale(.5) translateZ(0)
+      transform-origin:top left
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      width: 300%
+      transform: scale(.333) translateZ(0)
+      transform-origin:top left
+
+border-bottom-1px($color)
+  position: relative
+  &:before, &:after
+    content: ""
+    display: block
+    position: absolute
+    transform-origin: 0 0
+  &:after
+    border-bottom: 1px solid $color
+    left: 0
+    bottom: 0
+    width: 100%
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      width: 200%
+      transform: scale(.5) translateZ(0)
+      transform-origin:top left
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      width: 300%
+      transform: scale(.333) translateZ(0)
+      transform-origin:top left
+
+border-left-1px($color)
+  position: relative
+  &:before, &:after
+    content: ""
+    display: block
+    position: absolute
+    transform-origin: 0 0
+    -webkit-transform-origin: 0 0
+  &:before
+    border-left: 1px solid $color
+    top: 0
+    left: 0
+    height: 100%
+    transform-origin: right 0
+    -webkit-transform-origin: right 0
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      height: 200%
+      transform: scale(.5) translateZ(0)
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      height: 300%
+      transform: scale(.333) translateZ(0)
+
+@mixin border-none()
+  position: relative
+  &:after
+    content: ""
+    pointer-events: none
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    transform-origin: 0 0
+    -webkit-transform-origin: 0 0
+    box-sizing: border-box
+    -webkit-box-sizing:border-box
+    width: 100%
+    height: 100%
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      width: 200%
+      height: 200%
+      line-height: 180%
+      font-size: 20px
+      transform: scale(.5) translateZ(0)
+      -webkit-transform: scale(.5) translateZ(0)
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      width: 300%
+      height: 300%
+      line-height: 250%
+      font-size: 25px
+      transform: scale(.33) translateZ(0)
+      -webkit-transform: scale(.33) translateZ(0)
