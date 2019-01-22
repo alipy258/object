@@ -20,11 +20,19 @@ const createLintingRule = () => ({
   }
 })
 
+function handleEntryApp () {
+  let entryApp = {
+    app: './src/main.js'
+  }
+  if (process.env.npm_config_vconsole) {
+    entryApp['vconsole'] = './node_modules/vconsole/dist/vconsole.min.js'
+  }
+  return entryApp
+}
+
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
-  },
+  entry: handleEntryApp(),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

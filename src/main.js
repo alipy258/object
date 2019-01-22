@@ -6,6 +6,10 @@ import App from './App'
 import router from './router'
 import './ui'
 
+/* eslint-disable no-unused-vars */
+import Vconsole from 'vconsole'
+const vConsole = new Vconsole()
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
